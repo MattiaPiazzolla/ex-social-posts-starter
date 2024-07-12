@@ -61,7 +61,22 @@ let postDestination = document.getElementById('container');
 
 // CICLO L'ARRAY PER CREARE I POST
 posts.forEach((elem, index) => {
-
+    
+    // RECUPERO LA DATA ATTUALE
+    const  date = new Date(elem.created);
+    // CAMBIO IL FORMATO 
+    const   newFormatDate = date.toDateString();
+    // onestamente ho trovato questo su internet (geeksforgeeks) piu o meno penso di aver capito la logica che c'e dietro 
+    // RECUPERO GLI ELEMENTI INDIVIDUALMENTE 
+    const weekDays = 
+    ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const monthsArr = 
+    ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const currentDateObj = new Date(elem.created);
+    const currentDay = weekDays[currentDateObj.getDay()];
+    const currentDate  = currentDateObj.getDate();
+    const currentMonth  = monthsArr[currentDateObj.getMonth()];
+    const currentYear = currentDateObj.getFullYear();
     // CREP UNA VARIABILE PER GESTIRE L'IMMAGINE UTENTE
     let userImage;
     // AGGIUNGO LE CONDIZIONI PER VERIFICARE CHE L'IMMAGINE UTENTE SIA PRESENTE 
@@ -84,7 +99,7 @@ posts.forEach((elem, index) => {
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${elem.author.name}</div>
-                        <div class="post-meta__time">${elem.created}</div>
+                        <div class="post-meta__time">${currentDate} / ${currentMonth} / ${currentYear}</div>
                     </div>                    
                 </div>
             </div>
