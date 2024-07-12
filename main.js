@@ -60,7 +60,7 @@ const posts = [
 let postDestination = document.getElementById('container');
 
 // CICLO L'ARRAY PER CREARE I POST
-posts.forEach((elem) => {
+posts.forEach((elem, index) => {
     // VADO A CREARE I POST CON GLI ELEMENTI DEGLI OGGETTI DENTRO L'ARRAY
     postDestination.innerHTML += 
         // VADO AD INSERIRE GLI OPPORTUNI ELEMENTI NELLE VARIABILI
@@ -89,7 +89,7 @@ posts.forEach((elem) => {
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">${elem.likes}</b> persone
+                        Piace a <b id="like-counter-${index}" class="js-likes-counter">${elem.likes}</b> persone
                     </div>
                 </div> 
             </div>            
@@ -103,3 +103,8 @@ posts.forEach((elem) => {
 
 // RECUPER IL PULSANTE LIKE
 let likeBtn = document.querySelectorAll('.like-button');
+
+// CICLO GLI ELEMENTI DI likeBtn
+likeBtn.forEach((elem, index) => {
+    
+})
