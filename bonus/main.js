@@ -67,7 +67,10 @@ posts.forEach((elem, index) => {
     // AGGIUNGO LE CONDIZIONI PER VERIFICARE CHE L'IMMAGINE UTENTE SIA PRESENTE 
     if (elem.author.image){
         // ATTRIBUISCO L'IMMAGINE ALLA VARIABILE 
-        userImage = `<img class="profile-pic" src="${elem.author.image}" alt=${elem.author.name}">`
+        userImage = `<img class="profile-pic" src="${elem.author.image}" alt=${elem.author.name}">`;
+    } else {
+        let initials = elem.author.name.split(' ').map(name => name[0]).join('');
+        userImage = `<div class="profile-pic-default"><span>${initials}</span></div>`;
     }
 
     // VADO A CREARE I POST CON GLI ELEMENTI DEGLI OGGETTI DENTRO L'ARRAY
@@ -77,7 +80,7 @@ posts.forEach((elem, index) => {
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                                     
+                        ${userImage}
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${elem.author.name}</div>
