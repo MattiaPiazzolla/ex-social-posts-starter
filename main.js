@@ -55,3 +55,6 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+// RECUPERO L'ELEMENTO DI DESTINAZIONE DEI POST DAL DOM
+let postDestination = document.getElementById('post');
