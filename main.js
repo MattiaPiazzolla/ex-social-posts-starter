@@ -113,15 +113,19 @@ likeBtn.forEach((elem, index) => {
 
         // CONDIZIONI PER VERIFICARE SE IL BOTTONE È GIÀ STATO CLICCATO 
         if (likeBtn[index].classList.contains('like-button--liked')){
+            // DIMINUISCO IL NUMERO DI LIKE
             posts[index].likes -= 1;
             // AGGIORNO LA VARIABILE PER L'INDEX DEI LIKE
             likeBtn[index].classList.remove('like-button--liked');
         } else {
+            // AUMENTO IL NUMEOR DI LIKE
             posts[index].likes += 1;
     
             // AGGIORNO LA VARIABILE PER L'INDEX DEI LIKE
             likeBtn[index].classList.add('like-button--liked');
         }
-
+        // RECUPERO IL COUNTER DEL LIKE
+        let likeCounter = document.getElementById('like-counter-'+index);
+        likeCounter.innerText = posts[index].likes;
     });
 })
