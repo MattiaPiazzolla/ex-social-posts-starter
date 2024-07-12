@@ -58,3 +58,8 @@ const posts = [
 
 // RECUPERO L'ELEMENTO DI DESTINAZIONE DEI POST DAL DOM
 let postDestination = document.getElementById('post');
+
+// CICLO L'ARRAY PER CREARE I POST
+posts.forEach((elem) => {
+    
+})
