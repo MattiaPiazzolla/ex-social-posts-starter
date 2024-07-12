@@ -117,6 +117,11 @@ likeBtn.forEach((elem, index) => {
             // AGGIORNO LA VARIABILE PER L'INDEX DEI LIKE
             likeBtn[index].classList.remove('like-button--liked');
         } else {
+            posts[index].likes += 1;
+    
+            // AGGIORNO LA VARIABILE PER L'INDEX DEI LIKE
+            likeBtn[index].classList.add('like-button--liked');
         }
+
     });
 })
