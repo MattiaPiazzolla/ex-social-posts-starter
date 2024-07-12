@@ -64,8 +64,11 @@ posts.forEach((elem, index) => {
 
     // CREP UNA VARIABILE PER GESTIRE L'IMMAGINE UTENTE
     let userImage;
-    
-
+    // AGGIUNGO LE CONDIZIONI PER VERIFICARE CHE L'IMMAGINE UTENTE SIA PRESENTE 
+    if (elem.author.image){
+        // ATTRIBUISCO L'IMMAGINE ALLA VARIABILE 
+        userImage = `<img class="profile-pic" src="${elem.author.image}" alt=${elem.author.name}">`
+    }
 
     // VADO A CREARE I POST CON GLI ELEMENTI DEGLI OGGETTI DENTRO L'ARRAY
     postDestination.innerHTML += 
@@ -74,7 +77,7 @@ posts.forEach((elem, index) => {
             <div class="post__header">
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${elem.author.image}" alt=${elem.author.name}">                
+                                     
                     </div>
                     <div class="post-meta__data">
                         <div class="post-meta__author">${elem.author.name}</div>
