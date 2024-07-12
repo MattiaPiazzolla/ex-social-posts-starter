@@ -108,6 +108,12 @@ let likeBtn = document.querySelectorAll('.like-button');
 likeBtn.forEach((elem, index) => {
     // AGGIUNGO UN EVENTO CLICK AL PULSANTE LIKE
     elem.addEventListener('click', function(e){
+        // FA IN MODO CHE IL CLICK VENGA PASSATO SOLO AL likeBtn
+        e.preventDefault();
 
+        // CONDIZIONI PER VERIFICARE SE IL BOTTONE È GIÀ STATO CLICCATO 
+        if (likeBtn[index].classList.contains('like-button--liked')){
+        } else {
+        }
     });
 })
