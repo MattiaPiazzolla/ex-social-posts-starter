@@ -106,5 +106,8 @@ let likeBtn = document.querySelectorAll('.like-button');
 
 // CICLO GLI ELEMENTI DI likeBtn
 likeBtn.forEach((elem, index) => {
-    
+    // AGGIUNGO UN EVENTO CLICK AL PULSANTE LIKE
+    elem.addEventListener('click', function(e){
+
+    });
 })
