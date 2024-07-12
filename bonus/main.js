@@ -61,6 +61,12 @@ let postDestination = document.getElementById('container');
 
 // CICLO L'ARRAY PER CREARE I POST
 posts.forEach((elem, index) => {
+
+    // CREP UNA VARIABILE PER GESTIRE L'IMMAGINE UTENTE
+    let userImage;
+    
+
+
     // VADO A CREARE I POST CON GLI ELEMENTI DEGLI OGGETTI DENTRO L'ARRAY
     postDestination.innerHTML += 
         // VADO AD INSERIRE GLI OPPORTUNI ELEMENTI NELLE VARIABILI
