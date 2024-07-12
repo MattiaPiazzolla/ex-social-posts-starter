@@ -24,11 +24,10 @@ SCOMPOSIZIONE IN SOTTOPROBLEMI
 >Fare un ciclo for each degli elementi dell'array
     >>Vado a mostrare a video gli elementi ciclati con l'impaginazione predefinita dal modello starter
 >Creo la funzione per aumentare il conteggio dei like e colorare il tasto like (attivare)
->Creo la funzione per diminuire il conteggio dei like e togliere il colore dal tasto like (disattivare)
+(disattivare)
     >>Aggiungo le condizioni che controllano che il tasto like non sia gia stato cliccato
     >>Pusho il valore dell'id in un nuovo array
     >>Altrimenti lo rimuovo
 >Ciclo l'array iniziale
     >>Verifico se gli elemento cliccato è incluso nell'array appena creato 
         >>>vado chiamare la funzione per aumentare il contenggio dei like e colorare il tasto like
-        >>>Vado a chiamare la funzione per diminuire il conteggio dei like e togliere il colore dal tasto like
