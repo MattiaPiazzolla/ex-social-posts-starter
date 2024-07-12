@@ -16,3 +16,18 @@ Ragioniamo come sempre a step.
 Prima scriviamo nei commenti la logica in italiano e poi traduciamo in codice.
 console.log() è nostro amico.
 Quando un pezzo di codice funziona, chiediamoci se possiamo scomporlo in funzioni più piccole.
+
+
+SCOMPOSIZIONE IN SOTTOPROBLEMI
+*Milestone 1* - Prendendo come riferimento il layout di esempio presente nell'html, stampiamo i post del nostro feed attraverso javascript.
+>Recuper l'elemento dal DOM che andrà a contenrt gli elementi social dell'array
+>Fare un ciclo for each degli elementi dell'array
+    >>Vado a mostrare a video gli elementi ciclati con l'impaginazione predefinita dal modello starter
+>Aggiungo un event listener al tasto like 
+    >>Aggiungo le condizioni che controllano che il tasto like non sia gia stato cliccato
+    >>Pusho il valore dell'id in un nuovo array
+    >>Altrimenti lo rimuovo
+>Ciclo l'array iniziale
+    >>Verifico se gli elemento cliccato è incluso nell'array appena creato 
+        >>>vado chiamare la funzione per aumentare il contenggio dei like e colorare il tasto like
+        >>>Vado a chiamare la funzione per diminuire il conteggio dei like e togliere il colore dal tasto like
