@@ -113,6 +113,9 @@ likeBtn.forEach((elem, index) => {
 
         // CONDIZIONI PER VERIFICARE SE IL BOTTONE È GIÀ STATO CLICCATO 
         if (likeBtn[index].classList.contains('like-button--liked')){
+            posts[index].likes -= 1;
+            // AGGIORNO LA VARIABILE PER L'INDEX DEI LIKE
+            likeBtn[index].classList.remove('like-button--liked');
         } else {
         }
     });
